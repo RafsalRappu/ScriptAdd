@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MyCalculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+    <!--<div style="background-color:grey" </div>-->
+    <div class="mx-auto" style="width: 200px;">
+
+        <div class="w-100 p-3">
+            <!--<p class="text-primary">Simple Calculator</p>-->
+            <div class="p-3 mb-2 bg-primary text-white">Simple Calculator</div>
+        </div><br />
+    </div>
+
+        <div class="mx-auto" style="width: 200px;">
+            <label> Enter First Number </label><br />
+            <input type="text" id="fNumber"><br /><br />
+
+        </div>
+
+
+        <div class="mx-auto" style="width: 200px;">
+            <label> Enter Second Number </label><br />
+            <input type="text" id="sNumber"><br /><br />
+
+        </div>
+        <div class="mx-auto" style="width: 200px;">
+
+            <button id="Add" type="button" class="btn btn-outline-primary"> + </button>
+            <button id="Multi" type="button" class="btn btn-outline-primary"> X </button>
+            <button id="Div" type="button" class="btn btn-outline-primary"> / </button>
+            <button id="Sub" type="button" class="btn btn-outline-primary"> - </button><br />
+            <button id="Reset" type="reset" class="btn btn-outline-success">New Calculation</button>
+        </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    $("#Add").click(function () {
+        var fNumber = $("#fNumber").val();
+        var sNumber = $("#sNumber").val();
+        var Total = parseInt(fNumber) + parseInt(sNumber);
+
+        alert(Total);
+        $val(Total);
+    })
+    $("#Multi").click(function () {
+        var fNumber = $("#fNumber").val();
+        var sNumber = $("#sNumber").val();
+        var Total = parseInt(fNumber) * parseInt(sNumber);
+
+        alert(Total);
+        $val(Total);
+    })
+    $("#Div").click(function () {
+        var fNumber = $("#fNumber").val();
+        var sNumber = $("#sNumber").val();
+        var Total = parseInt(fNumber) / parseInt(sNumber);
+
+        alert(Total);
+        $val(Total);
+    })
+    $("#Sub").click(function () {
+        var fNumber = $("#fNumber").val();
+        var sNumber = $("#sNumber").val();
+        var Total = parseInt(fNumber) - parseInt(sNumber);
+
+        alert(Total);
+        $val(Total);
+    })
+
+    $('#Reset').click(function () {
+       $ ('#fNumber').val('');
+        $('#sNumber').val('');
+        $('#fNumber').focus();
+    });
+</script>
